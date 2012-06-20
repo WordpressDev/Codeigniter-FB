@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|assets|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+FileETag MTime Size
+<IfModule mod_expires.c>
+  <files ~ "\.(htm|html|css|js|php|ico|jpg|jpeg|png|gif|swf)$">
+    SetOutputFilter DEFLATE
+    ExpiresActive on
+    ExpiresDefault "access plus 3 day"
+  </files>
+</IfModule>
