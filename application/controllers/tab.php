@@ -1,6 +1,4 @@
-<?php 
-
-if (! defined('BASEPATH')) exit('No direct script access');
+<?php if (!defined('BASEPATH')) exit('No direct script access');
 
 class Tab extends CI_Controller {
 
